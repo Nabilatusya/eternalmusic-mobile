@@ -203,9 +203,9 @@ class _CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0,
-      leading: const Icon(Icons.grid_view_rounded),
+      leading: const Icon(Icons.grid_view_rounded, color: Colors.white),
       actions: [
         Container(
           margin: const EdgeInsets.only(right: 20),

@@ -23,10 +23,14 @@ class PlaylistScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: const Text('Playlist'),
-        ),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            title: const Text(
+              'Playlist',
+              style: TextStyle(
+                color: Colors.white, // Atur warna teks sesuai kebutuhan Anda
+              ),
+            )),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
