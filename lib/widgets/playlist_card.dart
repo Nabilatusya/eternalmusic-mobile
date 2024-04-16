@@ -61,7 +61,7 @@ class PlaylistCard extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: const Icon(
-                Icons.play_circle,
+                Icons.play_circle_fill_outlined,
                 color: Colors.white,
               ),
             ),

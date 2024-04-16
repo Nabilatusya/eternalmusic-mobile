@@ -56,6 +56,16 @@ class _SongScreenState extends State<SongScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.of(context)
+                .pop(); // Fungsi untuk kembali ke layar sebelumnya
+          },
+        ),
       ),
       extendBodyBehindAppBar: true,
       body: Stack(
@@ -133,24 +143,24 @@ class _MusicPlayer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              IconButton(
-                iconSize: 35,
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.settings,
-                  color: Colors.white,
-                ),
-              ),
-              IconButton(
-                iconSize: 35,
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.cloud_download,
-                  color: Colors.white,
-                ),
-              ),
-            ],
+            // children: [
+            //   IconButton(
+            //     iconSize: 35,
+            //     onPressed: () {},
+            //     icon: const Icon(
+            //       Icons.settings,
+            //       color: Colors.white,
+            //     ),
+            //   ),
+            //   IconButton(
+            //     iconSize: 35,
+            //     onPressed: () {},
+            //     icon: const Icon(
+            //       Icons.cloud_download,
+            //       color: Colors.white,
+            //     ),
+            //   ),
+            // ],
           ),
         ],
       ),
@@ -188,8 +198,8 @@ class _BackgroundFilter extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-                Color(0xDBAFA0).withOpacity(0.9),
-               Color(0x49243E).withOpacity(0.9),
+              Color(0xBB8493).withOpacity(0.18),
+              Color(0x49243E).withOpacity(0.8),
             ],
           ),
         ),

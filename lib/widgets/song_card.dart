@@ -36,11 +36,19 @@ class SongCard extends StatelessWidget {
             ),
             Container(
               height: 50,
-              width: MediaQuery.of(context).size.width * 0.37,
+              width: MediaQuery.of(context).size.width * 0.38,
               margin: const EdgeInsets.only(bottom: 10),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: Colors.white.withOpacity(0.8),
+                borderRadius: BorderRadius.circular(22.0),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.black.withOpacity(0.8),
+                    Colors.white10
+                        .withOpacity(0.3), // Warna kedua untuk gradasi
+                  ],
+                ),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,7 +60,7 @@ class SongCard extends StatelessWidget {
                       Text(
                         song.title,
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                              color: Color(0xFF49243E),
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -60,14 +68,15 @@ class SongCard extends StatelessWidget {
                         song.description,
                         style: Theme.of(context).textTheme.bodySmall!.copyWith(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.normal,
                             ),
                       ),
                     ],
                   ),
                   const Icon(
-                    Icons.play_circle,
-                    color: Color(0xFF49243E),
+                    Icons.play_circle_outline_rounded,
+                    color: Colors.white,
+                    size: 32,
                   ),
                 ],
               ),
